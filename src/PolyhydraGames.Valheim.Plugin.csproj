@@ -1,0 +1,72 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net48</TargetFramework>
+		<LangVersion>latest</LangVersion>
+		<OutputPath>..\publish</OutputPath>
+	</PropertyGroup>
+
+	<Target Name="PostBuild" AfterTargets="PostBuildEvent">
+		<Copy SourceFiles="$(TargetDir)$(TargetName).dll" DestinationFolder="S:\valheim8\data\bepinex\BepInEx\plugins\PolyRcon" SkipUnchangedFiles="false" />
+	</Target>
+
+	<ItemGroup>
+
+		<!-- Update these paths to match your Valheim installation -->
+		<Reference Include="0Harmony">
+			<HintPath>..\dependencies\0Harmony.dll</HintPath>
+		</Reference>
+		<Reference Include="assembly_utils">
+		  <HintPath>..\dependencies\assembly_utils.dll</HintPath>
+		</Reference>
+		<Reference Include="BepInEx">
+			<HintPath>..\dependencies\BepInEx.dll</HintPath>
+		</Reference>
+
+		<Reference Include="BepInEx.Harmony">
+			<HintPath>..\dependencies\BepInEx.Harmony.dll</HintPath>
+		</Reference>
+
+		<Reference Include="Jotunn">
+		  <HintPath>..\dependencies\Jotunn.dll</HintPath>
+		</Reference>
+
+		<Reference Include="Splatform">
+			<HintPath>..\dependencies\Splatform.dll</HintPath>
+		</Reference>
+
+		<Reference Include="UnityEngine">
+			<HintPath>..\dependencies\UnityEngine.dll</HintPath>
+		</Reference>
+
+
+
+		<Reference Include="assembly_valheim">
+			<HintPath>..\dependencies\assembly_valheim.dll</HintPath>
+		</Reference>
+
+
+
+		<Reference Include="UnityEngine.AudioModule">
+		  <HintPath>..\dependencies\UnityEngine.AudioModule.dll</HintPath>
+		</Reference>
+
+		<Reference Include="UnityEngine.CoreModule">
+			<HintPath>..\dependencies\UnityEngine.CoreModule.dll</HintPath>
+		</Reference>
+
+		<Reference Include="UnityEngine.UnityWebRequestAudioModule">
+		  <HintPath>..\dependencies\UnityEngine.UnityWebRequestAudioModule.dll</HintPath>
+		</Reference>
+
+		<Reference Include="UnityEngine.UnityWebRequestModule">
+		  <HintPath>..\dependencies\UnityEngine.UnityWebRequestModule.dll</HintPath>
+		</Reference>
+
+		<Reference Include="ValheimRcon">
+			<HintPath>..\dependencies\ValheimRcon.dll</HintPath>
+		</Reference>
+
+	</ItemGroup>
+
+</Project>
