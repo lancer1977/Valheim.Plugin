@@ -36,10 +36,7 @@
 		</PackageReference>
 	</ItemGroup>
 
-	<ItemGroup>
-	  <ProjectReference Include="..\Polyhydra.Valheim.Api\Polyhydra.Valheim.Api.csproj" />
-	</ItemGroup>
-
+ 
  
 
 </Project>

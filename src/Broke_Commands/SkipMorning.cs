@@ -1,6 +1,6 @@
 ﻿using ValheimRcon.Commands;
 
-namespace PolyhydraGames.Valheim.RconExtensions.Commands
+namespace PolyhydraGames.Valheim.Plugin.Broke_Commands
 {
     internal class SkipMorning : RconCommand
     {

@@ -1,5 +1,5 @@
 ﻿using System.Linq;
-using PolyhydraGames.Valheim.RconExtensions.Extensions;
+using PolyhydraGames.Valheim.Plugin.Extensions;
 using ValheimRcon.Commands;
 
 namespace PolyhydraGames.Valheim.Plugin.Broke_Commands

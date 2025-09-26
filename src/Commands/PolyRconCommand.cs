@@ -1,10 +1,10 @@
-﻿using PolyhydraGames.Valheim.RconExtensions.Extensions;
-using PolyhydraGames.Valheim.RconExtensions.Models;
+﻿using PolyhydraGames.Valheim.Plugin.Extensions;
+using PolyhydraGames.Valheim.Plugin.Models;
 using Splatform;
 using ValheimRcon;
 using ValheimRcon.Commands;
 
-namespace PolyhydraGames.Valheim.RconExtensions.Commands
+namespace PolyhydraGames.Valheim.Plugin.Commands
 {
     public abstract class PolyRconCommand : RconCommand
     {

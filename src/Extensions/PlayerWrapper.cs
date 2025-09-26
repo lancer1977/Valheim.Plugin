@@ -1,9 +1,7 @@
-﻿using System.Runtime.CompilerServices;
-using PolyhydraGames.Valheim.RconExtensions.Models;
-using UnityEngine;
+﻿using PolyhydraGames.Valheim.Plugin.Models;
 using ValheimRcon;
 
-namespace PolyhydraGames.Valheim.RconExtensions.Extensions
+namespace PolyhydraGames.Valheim.Plugin.Extensions
 {
     public static class PlayerWrapper
     {

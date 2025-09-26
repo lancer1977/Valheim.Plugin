@@ -1,8 +1,9 @@
-﻿using PolyhydraGames.Valheim.RconExtensions.Models;
+﻿using PolyhydraGames.Valheim.Plugin.Commands;
+using PolyhydraGames.Valheim.Plugin.Models;
 using UnityEngine;
 using ValheimRcon.Commands;
 
-namespace PolyhydraGames.Valheim.RconExtensions.Commands
+namespace PolyhydraGames.Valheim.Plugin.Broke_Commands
 {
     
  

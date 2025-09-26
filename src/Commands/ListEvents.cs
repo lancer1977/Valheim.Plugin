@@ -1,7 +1,7 @@
 ﻿using System.Text;
 using ValheimRcon.Commands;
 
-namespace PolyhydraGames.Valheim.RconExtensions.Commands
+namespace PolyhydraGames.Valheim.Plugin.Commands
 {
     internal class ListEvents : RconCommand
     {

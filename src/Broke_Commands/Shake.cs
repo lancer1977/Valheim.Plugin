@@ -1,7 +1,7 @@
-﻿using PolyhydraGames.Valheim.RconExtensions.Commands;
-using PolyhydraGames.Valheim.RconExtensions.Extensions;
-using PolyhydraGames.Valheim.RconExtensions.Models;
-using System;
+﻿using System;
+using PolyhydraGames.Valheim.Plugin.Commands;
+using PolyhydraGames.Valheim.Plugin.Extensions;
+using PolyhydraGames.Valheim.Plugin.Models;
 using ValheimRcon.Commands;
 using static Attack;
 

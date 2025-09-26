@@ -1,8 +1,9 @@
-﻿using PolyhydraGames.Valheim.RconExtensions.Extensions;
-using PolyhydraGames.Valheim.RconExtensions.Models;
+﻿using PolyhydraGames.Valheim.Plugin.Commands;
+using PolyhydraGames.Valheim.Plugin.Extensions;
+using PolyhydraGames.Valheim.Plugin.Models;
 using ValheimRcon.Commands;
 
-namespace PolyhydraGames.Valheim.RconExtensions.Commands
+namespace PolyhydraGames.Valheim.Plugin.Broke_Commands
 { //stagger 76561197962914477
     internal class Stagger : PolyRconCommand
     {

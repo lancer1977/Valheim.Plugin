@@ -1,5 +1,5 @@
-﻿using PolyhydraGames.Valheim.RconExtensions.Commands;
-using PolyhydraGames.Valheim.RconExtensions.Models;
+﻿using PolyhydraGames.Valheim.Plugin.Commands;
+using PolyhydraGames.Valheim.Plugin.Models;
 using ValheimRcon.Commands;
 
 namespace PolyhydraGames.Valheim.Plugin.AddNoise

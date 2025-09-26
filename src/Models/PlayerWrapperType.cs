@@ -1,11 +1,33 @@
-﻿using PolyhydraGames.Valheim.RconExtensions.Extensions;
-using System;
-using System.Collections.ObjectModel;
+﻿using System.Collections;
 using UnityEngine;
 using ValheimRcon;
 
-namespace PolyhydraGames.Valheim.RconExtensions.Models
+namespace PolyhydraGames.Valheim.Plugin.Models
 {
+    public class CoroutineRunner : MonoBehaviour
+    {
+        private static CoroutineRunner _instance;
+
+        public static CoroutineRunner Instance
+        {
+            get
+            {
+                if (_instance == null)
+                {
+                    var go = new GameObject("CoroutineRunner");
+                    GameObject.DontDestroyOnLoad(go);
+                    _instance = go.AddComponent<CoroutineRunner>();
+                }
+                return _instance;
+            }
+        }
+
+        public void Run(IEnumerator routine)
+        {
+            StartCoroutine(routine);
+        }
+    }
+
     public record PlayerWrapperType(ZNetPeer Peer, ZDO Zdo)
     {
         public void PeerInvoke(string method, params object[] args)

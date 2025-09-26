@@ -2,12 +2,14 @@
 
 	<PropertyGroup>
 		<TargetFramework>net48</TargetFramework>
+		<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
 		<LangVersion>latest</LangVersion>
 		<OutputPath>..\publish</OutputPath>
+		<AppendFramwork></AppendFramwork>
 	</PropertyGroup>
 
 	<Target Name="PostBuild" AfterTargets="PostBuildEvent">
-		<Copy SourceFiles="$(TargetDir)$(TargetName).dll" DestinationFolder="S:\valheim8\data\bepinex\BepInEx\plugins\PolyRcon" SkipUnchangedFiles="false" />
+		<Copy  SourceFiles="$(TargetDir)$(TargetName).dll" DestinationFolder="S:\valheim8\data\bepinex\BepInEx\plugins\PolyRcon" SkipUnchangedFiles="false" />
 	</Target>
 
 	<ItemGroup>

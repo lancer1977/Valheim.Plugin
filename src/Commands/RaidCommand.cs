@@ -1,8 +1,8 @@
-﻿using PolyhydraGames.Valheim.RconExtensions.Models;
+﻿using PolyhydraGames.Valheim.Plugin.Models;
 using UnityEngine;
 using ValheimRcon.Commands;
 
-namespace PolyhydraGames.Valheim.RconExtensions.Commands;
+namespace PolyhydraGames.Valheim.Plugin.Commands;
 
 internal class RaidCommand : PolyRconCommand
 {

@@ -1,12 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using UnityEngine;
 
-namespace PolyhydraGames.Valheim.RconExtensions.Extensions;
-
-using System;
-using System.Collections.Generic;
-using UnityEngine;
+namespace PolyhydraGames.Valheim.Plugin.Extensions;
 
 public enum RpcCommand
 {
@@ -263,18 +258,7 @@ public static class Helpers
     }
 
 
-    public static List<string> GetFunctions()
-    {
-        ZLog.Log($"Log RPC Functions:");
-        var names = new List<string>();
-        foreach (var kvp in ZRoutedRpc.instance.m_functions)
-        {
-            ZLog.Log($"RPC: {kvp.Key}");
-            names.Add(kvp.Value.ToString());
-        }
-
-        return names;
-    }
+ 
     public static string GetPlayerInfo()
     {
         var items = Player.GetAllPlayers().Select(x => x.GetPlayerID() + " - " + x.GetPlayerName()).ToArray();

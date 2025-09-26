@@ -26,9 +26,17 @@ namespace PolyhydraGames.Valheim.Plugin.AddEffect
                 var effect = prefab.GetComponent<StatusEffect>();
                 if (effect != null)
                 {
-                    player.m_seman.AddStatusEffect(effect, true);
+                    player.GetSEMan().AddStatusEffect(effect, true);
                     Chat.instance.AddString($"[Odin] You are blessed with undead herpes, aka {effectName}!");
                 }
+                else
+                {
+                    Logger.LogWarning("Effect was null");
+                }
+            }
+            else
+            {
+                Logger.LogWarning("prefab was null");
             }
         }
         private void Awake()

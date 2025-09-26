@@ -1,4 +1,4 @@
-﻿namespace PolyhydraGames.Valheim.RconExtensions.Extensions
+﻿namespace PolyhydraGames.Valheim.Plugin.Extensions
 {
     public static class StringUtils
     {

@@ -1,10 +1,8 @@
-﻿using PolyhydraGames.Valheim.RconExtensions.Models;
-using System.Linq;
-using UnityEngine;
+﻿using System.Linq;
+using PolyhydraGames.Valheim.Plugin.Models;
 using ValheimRcon.Commands;
-using static System.Net.Mime.MediaTypeNames;
 
-namespace PolyhydraGames.Valheim.RconExtensions.Commands
+namespace PolyhydraGames.Valheim.Plugin.Commands
 {
     internal class Whisper : PolyRconCommand
     {
