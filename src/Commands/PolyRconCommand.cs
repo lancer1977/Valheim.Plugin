@@ -1,6 +1,7 @@
 ﻿using PolyhydraGames.Valheim.Plugin.Extensions;
 using PolyhydraGames.Valheim.Plugin.Models;
 using Splatform;
+using UnityEngine;
 using ValheimRcon;
 using ValheimRcon.Commands;
 
@@ -25,9 +26,12 @@ namespace PolyhydraGames.Valheim.Plugin.Commands
         }
 
         protected abstract string OnHandle(PlayerWrapperType player, CommandArgs args);
-        public static string FirstArg(CommandArgs args)
+     
+        public abstract string Method { get; }
+
+        protected void InvokeRouted(PlayerWrapperType player, params object[] items)
         {
-            return args.GetString(1);
+            ZRoutedRpc.instance.InvokeRoutedRPC(player.ZDOID, Method, items);
         }
     }
 }

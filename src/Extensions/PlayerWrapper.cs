@@ -1,10 +1,13 @@
-﻿using PolyhydraGames.Valheim.Plugin.Models;
+﻿
+using PolyhydraGames.Valheim.Plugin.Models;
+using UnityEngine;
 using ValheimRcon;
 
 namespace PolyhydraGames.Valheim.Plugin.Extensions
 {
     public static class PlayerWrapper
     {
+        public static Vector3 GetPosition(this Player player) => player.transform.position;
         public static PlayerWrapperType Create(ZNetPeer peer) => new PlayerWrapperType(peer, peer.GetZDO());
         public static void InvokeRoutedRpcOnWorld(this PlayerWrapperType player, RpcCommand rpc, params object[] args)
         {

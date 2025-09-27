@@ -8,9 +8,8 @@ namespace PolyhydraGames.Valheim.Plugin.AddEffect
     {
         private string ProcessCommand(PlayerWrapperType player, CommandArgs args)
         {
-
-            var statusName = FirstArg(args);
-            Metadata.ApplyEffectToPlayer(player.Peer, statusName);
+            var statusName = args.GetString(1);
+            InvokeRouted(player,statusName);
             return $"Applied status '{statusName}' to {player.Name}";
         }
         protected override string OnHandle(PlayerWrapperType player, CommandArgs args)
@@ -21,5 +20,6 @@ namespace PolyhydraGames.Valheim.Plugin.AddEffect
 
         public override string Command => Metadata.Command;
         public override string Description => Metadata.Description;
+        public override string Method => Metadata.RCPCall;
     }
 }

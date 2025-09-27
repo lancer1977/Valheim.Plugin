@@ -9,7 +9,7 @@ namespace PolyhydraGames.Valheim.Plugin.Broke_Commands
     {
         public override string Command => "explode";
         public override string Description => "Explode a player. Usage: explode <player>";
-
+        public override string Method { get; } = "";
         protected override string OnHandle(PlayerWrapperType player, CommandArgs args)
         {
             if (args.Arguments.Count < 1) return "Usage: explode <player>";

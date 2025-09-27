@@ -11,13 +11,14 @@ namespace PolyhydraGames.Valheim.Plugin.AddNoise
             if (args.Arguments.Count < Metadata.MinimumParameters)
                 return Metadata.Usage;
 
-            var noiseName = args.GetString(0);
-            var pos = args.GetVector3(1);
-            Metadata.ApplyEffectToPlayer(player.Peer, noiseName, pos);
-            return $"Applied status '{noiseName}' to {player.Name}";
+            var noiseName = args.GetString(1);
+            var pos = args.GetVector3(2);
+            ZRoutedRpc.instance.InvokeRoutedRPC(player.ZDOID, Metadata.RCPCall, noiseName, pos);
+            return $"Played noise '{noiseName}' at {player.Name}";
         }
 
         public override string Command => Metadata.Command;
         public override string Description => Metadata.Description;
+        public override string Method => Metadata.RCPCall;
     }
 }

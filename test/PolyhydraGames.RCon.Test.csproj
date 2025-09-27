@@ -36,6 +36,16 @@
 		</PackageReference>
 	</ItemGroup>
 
+	<ItemGroup>
+	  <ProjectReference Include="..\src\PolyhydraGames.Valheim.Plugin.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Reference Include="ValheimRcon">
+	    <HintPath>..\..\BepinExBase\dependencies\ValheimRcon.dll</HintPath>
+	  </Reference>
+	</ItemGroup>
+
  
  
 

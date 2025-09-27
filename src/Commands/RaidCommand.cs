@@ -14,7 +14,7 @@ internal class RaidCommand : PolyRconCommand
         if (args.Arguments.Count < 1)
             return "Usage: raid [playerId] <eventName>";
 
-        var eventName = FirstArg(args);
+        var eventName = args.GetString(1);
         var pos = player.RefPosition;
 
         if (!RandEventSystem.instance.HaveEvent(eventName))
@@ -23,4 +23,5 @@ internal class RaidCommand : PolyRconCommand
         RandEventSystem.instance.SetRandomEventByName(eventName, pos);
         return $"Raid started: {eventName} {(pos != Vector3.zero ? "at player" : "globally")}";
     }
+    public override string Method { get; } = "";
 }

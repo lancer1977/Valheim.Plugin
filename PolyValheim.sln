@@ -3,45 +3,56 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.14.36408.4
 MinimumVisualStudioVersion = 10.0.40219.1
-
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PolyhydraGames.Valheim.Plugin", "src\PolyhydraGames.Valheim.Plugin.csproj", "{82654948-7720-DB8A-147D-D7F2085ACA11}"
 EndProject
-
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PolyhydraGames.RCon.Test", "test\PolyhydraGames.RCon.Test.csproj", "{6F1F0922-29A7-8992-C94C-92531C22A647}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
 EndProject
-
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Files", "Files", "{25C7FF37-4681-409C-B5F9-A517E25F9F89}"
+	ProjectSection(SolutionItems) = preProject
+		publish\CHANGELOG.md = publish\CHANGELOG.md
+		publish\manifest.json = publish\manifest.json
+		publish\README.md = publish\README.md
+	EndProjectSection
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "docs", "docs\", "{29F559A1-143D-7038-A368-B91C5016CF54}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.VirtualPath = "/localhost_51172"
+		Debug.AspNetCompiler.PhysicalPath = "docs\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_51172\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_51172"
+		Release.AspNetCompiler.PhysicalPath = "docs\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_51172\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "51172"
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{DF3A7BE6-5FCD-49AF-E045-3D6C2FF7B337}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DF3A7BE6-5FCD-49AF-E045-3D6C2FF7B337}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DF3A7BE6-5FCD-49AF-E045-3D6C2FF7B337}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DF3A7BE6-5FCD-49AF-E045-3D6C2FF7B337}.Release|Any CPU.Build.0 = Release|Any CPU
 		{82654948-7720-DB8A-147D-D7F2085ACA11}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{82654948-7720-DB8A-147D-D7F2085ACA11}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{82654948-7720-DB8A-147D-D7F2085ACA11}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{82654948-7720-DB8A-147D-D7F2085ACA11}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5EEAD90A-6E08-3ACF-C009-17FD302220C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5EEAD90A-6E08-3ACF-C009-17FD302220C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5EEAD90A-6E08-3ACF-C009-17FD302220C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5EEAD90A-6E08-3ACF-C009-17FD302220C7}.Release|Any CPU.Build.0 = Release|Any CPU
 		{6F1F0922-29A7-8992-C94C-92531C22A647}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{6F1F0922-29A7-8992-C94C-92531C22A647}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6F1F0922-29A7-8992-C94C-92531C22A647}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6F1F0922-29A7-8992-C94C-92531C22A647}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8ACC1F8F-BC5C-4A85-87A2-C743E20A1725}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8ACC1F8F-BC5C-4A85-87A2-C743E20A1725}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8ACC1F8F-BC5C-4A85-87A2-C743E20A1725}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8ACC1F8F-BC5C-4A85-87A2-C743E20A1725}.Release|Any CPU.Build.0 = Release|Any CPU
-		{43D6353E-AE3D-424E-8D9D-B274AB342A3E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{43D6353E-AE3D-424E-8D9D-B274AB342A3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{43D6353E-AE3D-424E-8D9D-B274AB342A3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{43D6353E-AE3D-424E-8D9D-B274AB342A3E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{29F559A1-143D-7038-A368-B91C5016CF54}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29F559A1-143D-7038-A368-B91C5016CF54}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29F559A1-143D-7038-A368-B91C5016CF54}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{29F559A1-143D-7038-A368-B91C5016CF54}.Release|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
