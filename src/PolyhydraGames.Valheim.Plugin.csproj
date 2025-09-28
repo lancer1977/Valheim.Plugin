@@ -72,8 +72,4 @@
 
 	</ItemGroup>
 
-	<ItemGroup>
-	  <ProjectReference Include="..\..\Valheim.Data\Valheim.Data\Valheim.Data.csproj" />
-	</ItemGroup>
-
 </Project>
