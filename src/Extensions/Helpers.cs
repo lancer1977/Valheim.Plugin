@@ -14,7 +14,7 @@ public static class Helpers
     {
         MessageHud.instance.ShowMessage(MessageHud.MessageType.TopLeft, message);
     }
-    
+
     [CanBeNull]
     public static StatusEffect GetEffect(string statusName)
     {
@@ -27,18 +27,19 @@ public static class Helpers
             {
                 var message = "No effect found for " + statusName + "Effects: " + string.Join(", ", ObjectDB.instance.m_StatusEffects.Select(x => x.name));
                 Jotunn.Logger.LogWarning(message);
-
             }
         }
 
         return statusEffect;
     }
+
     public static bool IsDedicatedServer()
     {
         var isDedicated = ZNet.instance && ZNet.instance.IsDedicated();
         Jotunn.Logger.LogInfo("[IsDedicated] " + isDedicated);
         return isDedicated;
     }
+
     public static string GetRpcCommandName(this RpcCommand command)
     {
         return RpcCommandMap.Names.TryGetValue(command, out var name) ? name : "RPC_Unknown";
@@ -52,12 +53,31 @@ public static class Helpers
     public static string GetPlayerInfo()
     {
         var items = Player.GetAllPlayers().Select(x => x.GetPlayerID() + " - " + x.GetPlayerName()).ToArray();
-        return string.Join(
-            "\n",
-            items
-        );
+        return string.Join("\n", items);
     }
 
+    public static List<string> GetItems()
+     => ObjectDB.instance.m_items.OrderBy(x => x).Select(x => x.name).ToList();
+    public static List<string> GetStatusEffects()
+    => ObjectDB.instance.m_StatusEffects.OrderBy(x => x).Select(x => x.name).ToList();
+    public static List<string> GetPrefabNames()
+    { 
+        var items = ZNetScene.instance.GetPrefabNames();
+        return items;
+    } 
+
+    public static List<string> GetAllPlayerNames()
+    {
+        var items = Player.GetAllPlayers().Select(x => x.GetPlayerName()).ToList();
+        return items;
+    }
+
+    public static string FormatStatusEffects()
+    {
+        var items = GetStatusEffects();
+        var result = PrintItems(items, "StatusEffects");
+        return result;
+    }
     public static void ListPrefabs()
     {
         if (ZNetScene.instance == null)
@@ -66,13 +86,8 @@ public static class Helpers
             return;
         }
 
-        var names = ZNetScene.instance.GetPrefabNames();
-        foreach (var name in names)
-        {
-            ZLog.Log($"Prefab: {name}");
-        }
+        PrintItems(GetPrefabNames(), "Prefab");
 
-        ZLog.Log($"Total prefabs: {names.Count}");
     }
 
     public static List<string> GetEnvironmentNames()
@@ -83,36 +98,19 @@ public static class Helpers
             ZLog.Log("ZNetScene not ready yet.");
             return items;
         }
-
         var names = EnvMan.instance.m_environments.Select(e => e.m_name).ToList();
-        foreach (var name in names)
-        {
-            ZLog.Log($"Environment: {name}");
-        }
-
-        ZLog.Log($"Total environments: {names.Count}");
+        PrintItems(names, "Environment");
         return names;
     }
 
-    //ZRoutedRpc.instance.m_functions
-    //public static List<string> GetEnvironmentNames()
-    //{
-    //    List<string> items = null;
-    //    if (ZRoutedRpc.instance == null)
-    //    {
-    //        Debug.Log("ZNetScene not ready yet.");
-    //        return items;
-    //    }
+    public static string PrintItems(IList<string> items, string name)
+    {
+        var result = string.Join("\", \"", items);
+        ZLog.Log(name + ": " + result);
 
-    //    var names = ZRoutedRpc.instance. //m_functions.Select(e => e.m_name).ToList();
-    //    foreach (var name in names)
-    //    {
-    //        Debug.Log($"Environment: {name}");
-    //    }
-
-    //    Debug.Log($"Total environments: {names.Count}");
-    //    return names;
-    //}
+        ZLog.Log($"Total {name}s: {items.Count}");
+        return result;
+    }
 
 
 }

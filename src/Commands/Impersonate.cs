@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using PolyhydraGames.Valheim.Plugin.Extensions;
 using Splatform;
 using UnityEngine;
 using ValheimRcon.Commands;
@@ -35,11 +36,11 @@ namespace PolyhydraGames.Valheim.Plugin.Commands
             try
             {
                 name = args.GetString(0); 
-                message = string.Join(" ", args.Arguments.Skip(1)); // Everything else is message  
+                message = args.GetRemainingString(1); // Everything else is message  
                 if (!ZoneSystem.instance.GetLocationIcon(Game.instance.m_StartLocation, out var location))
                     location = new Vector3(0, 30, 0); 
                 ZRoutedRpc.instance.InvokeRoutedRPC(ZRoutedRpc.Everybody,
-                    "ChatMessage",
+                    "Whisper",
                     location,
                     (int)Talker.Type.Shout,
                     GetUserInfo(name),

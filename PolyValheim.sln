@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.14.36408.4
+# Visual Studio Version 18
+VisualStudioVersion = 18.0.11018.127 d18.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PolyhydraGames.Valheim.Plugin", "src\PolyhydraGames.Valheim.Plugin.csproj", "{82654948-7720-DB8A-147D-D7F2085ACA11}"
 EndProject
@@ -10,30 +10,27 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Files", "Files", "{25C7FF37-4681-409C-B5F9-A517E25F9F89}"
-	ProjectSection(SolutionItems) = preProject
-		publish\CHANGELOG.md = publish\CHANGELOG.md
-		publish\manifest.json = publish\manifest.json
-		publish\README.md = publish\README.md
-	EndProjectSection
 EndProject
 Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "docs", "docs\", "{29F559A1-143D-7038-A368-B91C5016CF54}"
 	ProjectSection(WebsiteProperties) = preProject
-		Debug.AspNetCompiler.VirtualPath = "/localhost_51172"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_61124"
 		Debug.AspNetCompiler.PhysicalPath = "docs\"
-		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_51172\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_61124\"
 		Debug.AspNetCompiler.Updateable = "true"
 		Debug.AspNetCompiler.ForceOverwrite = "true"
 		Debug.AspNetCompiler.FixedNames = "false"
 		Debug.AspNetCompiler.Debug = "True"
-		Release.AspNetCompiler.VirtualPath = "/localhost_51172"
+		Release.AspNetCompiler.VirtualPath = "/localhost_61124"
 		Release.AspNetCompiler.PhysicalPath = "docs\"
-		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_51172\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_61124\"
 		Release.AspNetCompiler.Updateable = "true"
 		Release.AspNetCompiler.ForceOverwrite = "true"
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
-		VWDPort = "51172"
+		VWDPort = "61124"
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Valheim.Data", "..\Valheim.Data\Valheim.Data\Valheim.Data.csproj", "{C3ABB51E-B095-481E-B8F9-344537BFFD38}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -53,6 +50,10 @@ Global
 		{29F559A1-143D-7038-A368-B91C5016CF54}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{29F559A1-143D-7038-A368-B91C5016CF54}.Release|Any CPU.ActiveCfg = Debug|Any CPU
 		{29F559A1-143D-7038-A368-B91C5016CF54}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{C3ABB51E-B095-481E-B8F9-344537BFFD38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3ABB51E-B095-481E-B8F9-344537BFFD38}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3ABB51E-B095-481E-B8F9-344537BFFD38}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C3ABB51E-B095-481E-B8F9-344537BFFD38}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

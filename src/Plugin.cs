@@ -28,6 +28,9 @@ namespace PolyhydraGames.Valheim.Plugin
 
                 RconCommandsUtil.RegisterAllCommands(Assembly.GetExecutingAssembly());
                 Jotunn.Logger.LogInfo("[PolyValheimRcon] Loaded");
+                Helpers.ListPrefabs();
+                Helpers.GetEnvironmentNames();
+                Helpers.GetStatusEffects();
             }
             catch (Exception ex)
             {
