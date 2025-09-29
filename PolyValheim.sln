@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 18
-VisualStudioVersion = 18.0.11018.127 d18.0
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36518.9 d17.14
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PolyhydraGames.Valheim.Plugin", "src\PolyhydraGames.Valheim.Plugin.csproj", "{82654948-7720-DB8A-147D-D7F2085ACA11}"
 EndProject
@@ -11,8 +11,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{02EA681E
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Files", "Files", "{25C7FF37-4681-409C-B5F9-A517E25F9F89}"
 EndProject
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "docs", "docs\", "{29F559A1-143D-7038-A368-B91C5016CF54}"
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "docs(1)", "docs\", "{29F559A1-143D-7038-A368-B91C5016CF54}"
 	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.8"
 		Debug.AspNetCompiler.VirtualPath = "/localhost_61124"
 		Debug.AspNetCompiler.PhysicalPath = "docs\"
 		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_61124\"
@@ -28,9 +29,8 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "docs", "docs\", "{29F559A1-
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
 		VWDPort = "61124"
+		SlnRelativePath = "docs\"
 	EndProjectSection
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Valheim.Data", "..\Valheim.Data\src\Valheim.Data.csproj", "{427965FC-D0B4-4181-4BB0-47F298EE3113}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -50,10 +50,6 @@ Global
 		{29F559A1-143D-7038-A368-B91C5016CF54}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{29F559A1-143D-7038-A368-B91C5016CF54}.Release|Any CPU.ActiveCfg = Debug|Any CPU
 		{29F559A1-143D-7038-A368-B91C5016CF54}.Release|Any CPU.Build.0 = Debug|Any CPU
-		{427965FC-D0B4-4181-4BB0-47F298EE3113}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{427965FC-D0B4-4181-4BB0-47F298EE3113}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{427965FC-D0B4-4181-4BB0-47F298EE3113}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{427965FC-D0B4-4181-4BB0-47F298EE3113}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

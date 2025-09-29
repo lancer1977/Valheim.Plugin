@@ -1,9 +1,37 @@
 ﻿using System.Collections;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.Networking;
 
 namespace PolyhydraGames.Valheim.Plugin.Models
 {
+    public class CommandRequestType
+    {
+        public string[] Messages { get; init; }
+        public string Command { get; set; }
+        public string Message { get; set; }
+        public CommandRequestType()
+        {
+
+        }
+    }
+
+    public static class CommandRequest
+    {
+        public static CommandRequestType Create(string fullMessage)
+        {
+            var split = fullMessage.Split(' ');
+
+            return new CommandRequestType()
+            {
+                Command = split[0],
+                Messages = split,
+                Message = split.Length < 2 ? "" : string.Join(" ", split.Skip(1))
+            };
+
+        }
+    }
+
     public class AudioHelper : MonoBehaviour
     {
         public IEnumerator PlayAudioFromUrl(string url, Vector3 position)
