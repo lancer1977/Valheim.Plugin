@@ -1,5 +1,21 @@
 ﻿namespace PolyhydraGames.Valheim.Plugin
 {
+    public static class Logger
+    {
+        public static void LogInfo(string message)
+        {
+            Jotunn.Logger.LogInfo(Plugin.LogHeader + message);
+        }
+
+        public static void LogWarning(string message)
+        {
+            Jotunn.Logger.LogWarning(Plugin.LogHeader + message);
+        }
+        public static void LogError(string exMessage)
+        {
+            Jotunn.Logger.LogWarning(Plugin.LogHeader + exMessage);
+        }
+    }
     public enum RpcCommand
     {
         SetGuardianPower,

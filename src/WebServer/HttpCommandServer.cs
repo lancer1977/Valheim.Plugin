@@ -2,8 +2,11 @@
 using System.Net;
 using System.Text;
 using System.Threading;
+using JetBrains.Annotations;
+using Newtonsoft.Json;
 using PolyhydraGames.Valheim.Plugin.Models;
 using UnityEngine;
+using Logger = Jotunn.Logger;
 
 namespace PolyhydraGames.Valheim.Plugin.WebServer
 {
@@ -21,7 +24,7 @@ namespace PolyhydraGames.Valheim.Plugin.WebServer
             _listenerThread = new Thread(ListenLoop);
             _listenerThread.Start();
 
-            Debug.Log("[MyMod] HTTP command server started on port 8080");
+            Logger.LogInfo("[MyMod] HTTP command server started on port 8080");
         }
 
         private void OnDestroy()
@@ -63,10 +66,51 @@ namespace PolyhydraGames.Valheim.Plugin.WebServer
             using var reader = new System.IO.StreamReader(request.InputStream, request.ContentEncoding);
             string body = reader.ReadToEnd();
             var command = CommandRequest.Create(body);
-            ActionManager.Instance.ProcessCommand(command);
+            var result = ActionManager.Instance.ProcessCommand(command);
             return "{\"status\":\"ok\"}";
 
         }
     }
 
+}
+
+public static class ResponseHelpers
+{
+
+    [CanBeNull] private static JsonSerializer _serializer;
+    private static JsonSerializer GetSerializer => _serializer ?? JsonSerializer.Create();
+    public static string ToJson(this PostResponse response)
+    {
+        return JsonConvert.SerializeObject(response);
+    }
+    public static PostResponse Unknown() => new PostResponse()
+    {
+        Status = "Unknown URL"
+    };
+    public static PostResponse Create(bool success, CommandRequestType command, string result)
+    {
+        return new PostResponse()
+        {
+            Status = success ? "Ok" : "Error",
+            Command = command.Command,
+            Message = result
+        };
+    }
+    public static PostResponse Create( CommandRequestType command, string result)
+    {
+        return new PostResponse()
+        {
+            Status =   "Ok"  ,
+            Command = command.Command,
+            Message = result
+        };
+    }
+}
+public class PostResponse
+{
+    public string Status { get; set; }
+    public string Command { get; set; }
+    public string Message { get; set; }
+    public string Data { get; set; }
+    public string DataType { get; set; }
 }

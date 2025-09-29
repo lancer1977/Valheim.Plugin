@@ -1,9 +1,11 @@
-﻿using System;
-using BepInEx;
+﻿using BepInEx;
 using HarmonyLib;
-using System.Reflection;
 using Jotunn.Utils;
 using PolyhydraGames.Valheim.Plugin.Extensions;
+using PolyhydraGames.Valheim.Plugin.WebServer;
+using System;
+using System.Reflection;
+using UnityEngine;
 using ValheimRcon;
 
 namespace PolyhydraGames.Valheim.Plugin
@@ -19,15 +21,16 @@ namespace PolyhydraGames.Valheim.Plugin
         public const string Guid = "com.polyhydragames.rcon";
         public const string Name = "Polyhydra Games Mods";
         public const string Version = "1.0.0";
+        public const string LogHeader = "[PolyValheimRcon]";
         private void Awake()
         { 
             _harmony.PatchAll();
-
+            RegisterHttpCalls();
             try
             {
 
                 RconCommandsUtil.RegisterAllCommands(Assembly.GetExecutingAssembly());
-                Jotunn.Logger.LogInfo("[PolyValheimRcon] Loaded");
+                Jotunn.Logger.LogInfo(" Loaded");
                 DatabaseHelpers.ListPrefabs();
                 DatabaseHelpers.GetEnvironmentNames();
                 DatabaseHelpers.GetStatusEffects();
@@ -41,7 +44,10 @@ namespace PolyhydraGames.Valheim.Plugin
 
         private void RegisterHttpCalls()
         {
-
+            var go = new GameObject(nameof(HttpCommandServer));
+            DontDestroyOnLoad(go); // keep it across scene loads
+            go.AddComponent<HttpCommandServer>();
+            ActionProcessor.RegisterActions();
         }
 
 

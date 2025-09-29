@@ -1,15 +1,15 @@
 ﻿using System.Collections.Generic;
-using JetBrains.Annotations; 
+using JetBrains.Annotations;
 using PolyhydraGames.Valheim.Plugin.Models;
 
 namespace PolyhydraGames.Valheim.Plugin.WebServer
 {
     public class ActionManager
     {
-        public string ProcessCommand(CommandRequestType request)
+        public PostResponse ProcessCommand(CommandRequestType request)
         {
             var action = GetAction(request.Command);
-            if (action == null) return "Command {request.Command] was not found";
+            if (action == null) return ResponseHelpers.Create(false, request, "Command {request.Command] was not found");
             return action.OnRequest(request);
         }
         public Dictionary<string, ValheimAction> Actions { get; } = new Dictionary<string, ValheimAction>();
@@ -26,7 +26,10 @@ namespace PolyhydraGames.Valheim.Plugin.WebServer
             return true;
         }
         private static ActionManager _instance;
+        private ActionManager()
+        {
 
+        }
         public static ActionManager Instance => _instance ??= new ActionManager();
 
     }
