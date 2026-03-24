@@ -150,3 +150,9 @@ If you encounter issues or have questions:
 ---
 
 Happy modding! ⚔️
+
+
+## 📖 Documentation
+Detailed documentation can be found in the following sections:
+- [Feature Index](./docs/features/README.md)
+- [Core Capabilities](./docs/features/core-capabilities.md)
