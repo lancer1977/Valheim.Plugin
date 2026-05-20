@@ -18,6 +18,7 @@ This directory documents all features and roadmap items. All state is now tracke
 - [Visual Studio Solution](./visual-studio-solution.md)
 - [Sub-module: images](./sub-module-images.md)
 - [Sub-module: publish](./sub-module-publish.md)
+- [Valheim Project Boundaries](./project-boundaries.md)
 
 
 ## Beyond the App

@@ -13,6 +13,17 @@ This repository serves as:
 - 🛠 A base for building gameplay mods or server-side utilities
 - 📦 A structured, testable C# mod codebase
 
+## Relationship To Valheim.RestServer
+
+This is the older Polyhydra Valheim plugin/RPC project. The current HTTP REST
+contract used by `channel-cheevos` lives in `Valheim.RestServer`.
+
+Use this repo as a reference for legacy command experiments and mod hooks. Add
+new REST endpoints and stream telemetry to `Valheim.RestServer` unless a legacy
+behavior is being intentionally ported.
+
+See [Valheim Project Boundaries](./docs/features/project-boundaries.md).
+
 The project is designed to grow as your mod evolves, supporting additional features, configs, and tooling over time.
 
 ---
@@ -156,6 +167,7 @@ Happy modding! ⚔️
 Detailed documentation can be found in the following sections:
 - [Feature Index](./docs/features/README.md)
 - [Core Capabilities](./docs/features/core-capabilities.md)
+- [Valheim Project Boundaries](./docs/features/project-boundaries.md)
 ## Quality Goal
 
 Non-UI and non-web library code should generally aim for 80%+ unit test coverage. When modifying shared/core libraries, prefer adding or updating tests as part of the change.
