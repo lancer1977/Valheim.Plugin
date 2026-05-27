@@ -11,6 +11,8 @@ tags: [documentation, Valheim.Plugin]
 
 # Feature Index
 
+> Archived reference index for `Valheim.Plugin`. Active work moved to `Valheim.RestServer`.
+
 This directory documents all features and roadmap items. All state is now tracked in front matter.
 
 ## Core Features (Existing Functionality)

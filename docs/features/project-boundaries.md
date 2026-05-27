@@ -1,6 +1,6 @@
 ---
 title: Valheim Project Boundaries
-status: active
+status: archived
 owner: @DreadBreadcrumb
 priority: high
 complexity: 2
@@ -13,9 +13,9 @@ tags: [feature, valheim-plugin, valheim-restserver, channel-cheevos]
 
 ## Summary
 
-`Valheim.Plugin` is the older Polyhydra Valheim modding/RPC experiment. It is
-related to `Valheim.RestServer`, but it is not the current production REST
-contract used by `channel-cheevos`.
+`Valheim.Plugin` is archived and reference-only. It is related to
+`Valheim.RestServer`, but it is not the current production REST contract used
+by `channel-cheevos`.
 
 Use this repository as a reference for legacy command experiments, RPC patterns,
 Harmony/Jotunn bootstrap ideas, and older PolyRcon-era behavior.
@@ -23,7 +23,7 @@ Harmony/Jotunn bootstrap ideas, and older PolyRcon-era behavior.
 ## Current Ownership
 
 - `Valheim.Plugin`
-  - Legacy modding foundation and PolyRcon/RPC command experiments.
+  - Archived legacy modding foundation and PolyRcon/RPC command experiments.
   - Contains older command implementations for effects, raids, audio, whisper,
     shake, and smite.
   - Uses the older `/command` style HTTP entry point.
@@ -61,12 +61,12 @@ cc-sidecar
 
 ## Migration Guidance
 
-- [ ] Treat `Valheim.RestServer` as the source of truth for new REST endpoints.
-- [ ] Port useful command experiments from `Valheim.Plugin` only after verifying
+- [x] Treat `Valheim.RestServer` as the source of truth for new REST endpoints.
+- [x] Port useful command experiments from `Valheim.Plugin` only after verifying
       they still match current Valheim/Jotunn APIs.
-- [ ] Do not add new public REST contract work to `Valheim.Plugin`.
-- [ ] Keep risky actions behind `channel-cheevos` policy and moderation.
-- [ ] Use `cc-sidecar` for overlays, not direct server mutation.
+- [x] Do not add new public REST contract work to `Valheim.Plugin`.
+- [x] Keep risky actions behind `channel-cheevos` policy and moderation.
+- [x] Use `cc-sidecar` for overlays, not direct server mutation.
 
 See also: [Legacy Extraction Plan](../roadmaps/legacy-extraction-plan.md).
 
@@ -84,3 +84,9 @@ The next major product opportunity is Valheim telemetry:
 
 New telemetry should be implemented in `Valheim.RestServer` first, then pulled
 into `channel-cheevos` for persistence, policy, dashboards, and sidecar display.
+
+## Archive Notes
+
+- This doc is preserved for historical boundary guidance only.
+- No new implementation work should be scheduled in `Valheim.Plugin`.
+- Refer to `Valheim.RestServer` for the active contract and current roadmap.

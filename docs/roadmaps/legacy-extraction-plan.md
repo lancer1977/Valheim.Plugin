@@ -2,9 +2,7 @@
 
 ## Summary
 
-`Valheim.Plugin` is the older PolyRcon/RPC-era Valheim project. It should not
-receive new public REST contract work, but it remains useful as a source of
-legacy command behavior and Harmony/Jotunn implementation ideas.
+`Valheim.Plugin` is archived and reference-only. It should not receive new public REST contract work, but it remains useful as a source of legacy command behavior and Harmony/Jotunn implementation ideas.
 
 The modernization plan is to mine any still-valid behavior from this repo,
 port it into `Valheim.RestServer` only when it still works against current
@@ -46,9 +44,9 @@ files in `Valheim.RestServer` and should be ported or explicitly retired before
 - [x] Compare each command with `Valheim.RestServer` equivalents.
 - [x] Identify hook/bootstrap code that can help telemetry capture.
 - [x] Identify broken commands that should remain retired.
-- [ ] Mark commands as keep, port, replace, or retire.
-- [ ] Document any current Valheim API changes needed before porting.
-- [ ] Move or rewrite any still-useful legacy-only behavior into `Valheim.RestServer`.
+- [x] Mark commands as keep, port, replace, or retire.
+- [x] Document any current Valheim API changes needed before porting.
+- [x] Move or rewrite any still-useful legacy-only behavior into `Valheim.RestServer`.
 
 ## Retired Or Risky Areas
 
@@ -68,7 +66,7 @@ files in `Valheim.RestServer` and should be ported or explicitly retired before
 ## Definition Of Done
 
 - [x] Legacy command inventory exists.
-- [ ] Useful behavior is linked to a `Valheim.RestServer` issue/roadmap item.
-- [ ] No new stream-facing work is planned directly in `Valheim.Plugin`.
-- [ ] `Valheim.Plugin` docs clearly identify the repo as reference/legacy.
-- [ ] Any unique legacy behavior has been either ported or explicitly retired.
+- [x] Useful behavior is linked to a `Valheim.RestServer` issue/roadmap item or intentionally retired.
+- [x] No new stream-facing work is planned directly in `Valheim.Plugin`.
+- [x] `Valheim.Plugin` docs clearly identify the repo as reference/legacy.
+- [x] Any unique legacy behavior has been either ported or explicitly retired.

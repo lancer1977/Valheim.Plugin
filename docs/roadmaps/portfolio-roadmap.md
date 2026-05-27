@@ -1,6 +1,7 @@
 # Valheim.Plugin portfolio roadmap
 
 ## Snapshot
+- Archived status: reference-only; no new implementation work should be scheduled here.
 - 90-day evidence: 9 commits, 25 files changed
 - Last signal: `7c17c0e`
 - Top modified areas: `docs`, `test`, `src`
@@ -10,35 +11,35 @@
 - Features docs: yes
 - Tests indexed: yes (`test/`)
 
-## Implemented now (V1 baseline)
+## Implemented now (historical baseline)
 - Plugin and RPC surfaces are documented across `valheimplugin.md`, `rpc-command-system.md`, and `modding-foundation.md`.
 - Publish and test workflows are documented through `sub-module-publish.md` and `sub-module-test.md`.
 - Starter and image guidance is captured in `a-starter-valheim-plugin-project.md` and `sub-module-images.md`.
 
 ## Gaps and opportunities
-- Integration behavior around plugin lifecycle in real Valheim contexts remains partially under-tested.
-- Publish assumptions are not consistently enforced with explicit release criteria.
-- No explicit rollback strategy for breaking command changes.
+- This repo is archived and should not receive new implementation work.
+- Any future extraction work belongs in `Valheim.RestServer` or a successor repo.
+- Historical notes here remain useful for reference, but they are no longer active backlog items.
 
 ## V1 (stability)
-- [ ] Add end-to-end smoke for plugin load, unload, and RPC command handling.
-- [ ] Add local install and startup verification steps to docs and release checklist.
-- [ ] Add compatibility notes for versioned command payloads and config.
-- [ ] Make publish testable from clean checkout in one documented command path.
+- [x] Archived; no new work will be scheduled here.
+- [x] Reference docs remain available for legacy lookup.
+- [x] Any future stabilization work belongs in the active successor repo.
+- [x] Preserve the historical commands and documentation without adding new behavior.
 
 ## V2 (confidence)
-- [ ] Expand integration test matrix for server + command edge cases.
-- [ ] Add changelog-driven migration notes for command API and runtime config.
-- [ ] Align `README`, feature docs, and test results into one release artifact.
-- [ ] Document dependency and environment constraints in a stable checklist.
+- [x] Archived; no new work will be scheduled here.
+- [x] Legacy documentation remains as a reference point only.
+- [x] Any integration or migration confidence work belongs in the successor repo.
+- [x] Keep the repo frozen except for archival documentation upkeep.
 
 ## V10 (scale)
-- [ ] Formalize plugin API compatibility policy and support matrix by Valheim versions.
-- [ ] Add monitoring signals for command failures and lifecycle faults.
-- [ ] Introduce reusable Valheim plugin maintenance template for future repos.
-- [ ] Create quarterly stability review with owner-defined risk acceptance criteria.
+- [x] Retired with the archive.
+- [x] No scale work will be pursued in this repository.
+- [x] Future plugin platform experimentation should start from the active successor.
+- [x] Keep this section only as historical evidence of the old direction.
 
 ## Delivery checklist
-- [ ] Plugin surface changes are accompanied by integration test evidence.
-- [ ] Publish and docs are updated together before merge.
-- [ ] Runtime behavior changes include explicit rollback instructions.
+- [x] Archived and documented as reference-only.
+- [x] Active work moved to `Valheim.RestServer`.
+- [x] Historical docs remain available for lookup.

@@ -1,5 +1,7 @@
 # Valheim.Plugin
 
+> Archived and reference-only. The active REST contract now lives in `Valheim.RestServer`.
+
 **Location:** `~/code/Valheim.Plugin`
 
 **Purpose:** Valheim mod providing RCON functionality, HTTP command server, and gameplay commands for server administrators. Integrates with BepInEx mod loader.

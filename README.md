@@ -1,30 +1,33 @@
 # Valheim.Plugin
 
-**Valheim.Plugin** is a C# Valheim mod project intended as a foundational plugin for the Valheim modding ecosystem.  
-It provides a clean, extensible starting point for building gameplay changes, utilities, and integrations using standard Valheim mod loaders.
+> Archived and reference-only.
+>
+> The active Valheim REST contract and stream-facing work now live in `Valheim.RestServer`.
+
+**Valheim.Plugin** is the older PolyRcon/RPC-era Valheim mod project. It remains here as a historical reference for legacy command experiments, Harmony/Jotunn hooks, and older implementation ideas.
 
 ---
 
 ## 🚀 Project Overview
 
-This repository serves as:
+This repository now serves as:
 
-- 🧩 A starter Valheim plugin project
-- 🛠 A base for building gameplay mods or server-side utilities
-- 📦 A structured, testable C# mod codebase
+- 🧩 A legacy plugin reference
+- 🛠 A historical source for old gameplay/RPC experiments
+- 📦 A frozen C# mod codebase kept for archival lookup
 
 ## Relationship To Valheim.RestServer
 
-This is the older Polyhydra Valheim plugin/RPC project. The current HTTP REST
-contract used by `channel-cheevos` lives in `Valheim.RestServer`.
+The current HTTP REST contract used by `channel-cheevos` lives in
+`Valheim.RestServer`.
 
-Use this repo as a reference for legacy command experiments and mod hooks. Add
-new REST endpoints and stream telemetry to `Valheim.RestServer` unless a legacy
-behavior is being intentionally ported.
+Use this repo only as a reference for legacy command experiments and mod hooks.
+If you need current REST endpoints, telemetry, or stream-safe integration work,
+use `Valheim.RestServer` instead.
 
-See [Valheim Project Boundaries](./docs/features/project-boundaries.md).
+See [Archive Notes](./docs/ARCHIVE.md) and [Valheim Project Boundaries](./docs/features/project-boundaries.md).
 
-The project is designed to grow as your mod evolves, supporting additional features, configs, and tooling over time.
+This historical snapshot is preserved for reference only.
 
 ---
 
@@ -165,6 +168,7 @@ Happy modding! ⚔️
 
 ## 📖 Documentation
 Detailed documentation can be found in the following sections:
+- [Archive Notes](./docs/ARCHIVE.md)
 - [Feature Index](./docs/features/README.md)
 - [Core Capabilities](./docs/features/core-capabilities.md)
 - [Valheim Project Boundaries](./docs/features/project-boundaries.md)
